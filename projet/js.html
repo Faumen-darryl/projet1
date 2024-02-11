@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>la page web</title>
+
+	<style type="text/css">
+    body{   
+      background:url("image/zz.png") 
+       fixed no-repeat;
+       background-size: 100% 100%;
+     }
+  </style>
+</head>
+<script type="text/javascript">
+	function calculer() {
+		var n1=document.frm.txt1.value;
+		var n2=document.frm.txt2.value;
+		var n4=(eval(n1)*eval(n2));
+		document.frm.txt4.value=n4;
+	}
+	function effacerfrom() {
+		var text1=document.frm.txt1.value;
+		var text2=document.frm.txt2.value;
+		var text4=document.frm.txt4.value;
+		if (text1=="") return false;
+		if (text2=="") return false;
+		if (text4=="") return false;
+		return true;
+	}
+</script>
+<body background="C:\xampp\htdocs\projet2\image\te.jpg">
+	<center>
+		<h2>
+			facture
+		</h2>
+	</center>
+<center><table border="1">
+	<tr><td>
+		<form name="frm">
+			entrer le prix du produit:<input type="text" name="txt1"/><br/>
+			entrer la quantité du produit:<input type="text" name="txt2"/><br/>
+			<center><input type="button" name="but" value="calculer" onclick="calculer()" /><br></center>
+			le montant est:<input type="text" name="txt4"/>FCFA<br/>
+			<center><input type="submit" name="btneffacer" value="effacer" onclick="return effacerform()" /><br/></center>
+		</form>
+	</td></tr>
+</table></center>
+<CENTER><H3>
+<a href="index.php">RETOUR</a>
+</H3>
+</CENTER>
+</body>
+</html>
